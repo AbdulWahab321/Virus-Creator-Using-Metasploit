@@ -141,8 +141,10 @@ def showInput():
                                 f"{pathData}&&cd/&&cd metasploit-framework/bin && msfvenom --list payloads",
                                 shell=True).decode("utf-8"))
                         payloadList = open(payloadFile).read()
+                        print(payloadList)
                     else:
                         payloadList = open(payloadFile).read()
+                        print(payloadList)
                 else:
                     cprint("please wait.... creating some components please be patient this is only one time process",
                            "red")
@@ -166,8 +168,10 @@ def showInput():
                                 f"{pathData}&&cd/&&cd metasploit-framework/bin && msfvenom --list payloads",
                                 shell=True).decode("utf-8"))
                         payloadList = open(payloadFile).read()
+                        print(payloadList)
                     else:
                         payloadList = open(payloadFile).read()
+                        print(payloadList)
                 else:
                     cprint("please wait.... creating some components please be patient this is only one time process",
                            "red")
@@ -176,10 +180,7 @@ def showInput():
                             f"{pathData}&&cd/&&cd metasploit-framework/bin && msfvenom --list payloads",
                             shell=True).decode("utf-8"))
                     payloadList = open(payloadFile).read()
-
-
-
-                print(payloadList)
+                    print(payloadList)
 
         elif platformPayload == "swd":
             print("Your current working directory is: " + os.getcwd())
