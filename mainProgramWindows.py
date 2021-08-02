@@ -59,8 +59,8 @@ else:
             pathData = open(pathDataFile).read()
         else:
             cprint("""
-               Don't install metasploit in folder if the metasploit-framework folder is in a folder 
-               please cut and paste it outside the folder
+ Don't install metasploit in folder if the metasploit-framework folder is in a folder 
+ please cut and paste it outside the folder
               """, "red", attrs=["bold"])
             cprint("Please don't add '/' or '\\' at last..", "red")
             pathto = input("In which drive you installed metasploit>>")
@@ -135,7 +135,7 @@ def showInput():
                 if os.path.exists(payloadFile):
                     payloadList = open(payloadFile).read()
                     if payloadList == "" or payloadList == " ":
-                        cprint("components have been modified fixing.....please wait","red")
+                        cprint("components have been modified fixing.....please wait", "red")
                         p = open(payloadFile, "w").write(
                             subprodup.check_output(
                                 f"{pathData}&&cd/&&cd metasploit-framework/bin && msfvenom --list payloads",
@@ -162,7 +162,7 @@ def showInput():
                 if os.path.exists(payloadFile):
                     payloadList = open(payloadFile).read()
                     if payloadList == "" or payloadList == " ":
-                        cprint("components have been modified fixing.....please wait","red")
+                        cprint("components have been modified fixing.....please wait", "red")
                         p = open(payloadFile, "w").write(
                             subprodup.check_output(
                                 f"{pathData}&&cd/&&cd metasploit-framework/bin && msfvenom --list payloads",
@@ -264,7 +264,7 @@ def showInput():
           lsf           list all available formats
           show-ip       shows your ip-address
           help          shows this message
-    
+
           How to create a payload?
               first to create payload type 'lsp' command so you can see a list of payloads
               then copy the payload you need to make
