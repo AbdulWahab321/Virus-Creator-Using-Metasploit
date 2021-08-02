@@ -103,7 +103,7 @@ else:
             payloadList = open(payloadFile).read()
     else:
         cprint(
-            "The created and saved components have been deleted or move.. Re-creating Components.... please be patient",
+            "The created and saved components have been deleted or moved.. Re-creating Components.... please be patient",
             "red")
         payloadF = open(payloadFile, "w").write(
             subprodup.check_output(f"{pathData}&&cd/&&cd metasploit-framework/bin && msfvenom --list payloads",
@@ -149,7 +149,7 @@ def showInput():
                         print(payloadList)
                 else:
                     cprint(
-                        "The created and saved components have been deleted or move.. Re-creating Components.... please be patient",
+                        "The created and saved components have been deleted or moved.. Re-creating Components.... please be patient",
                         "red")
                     payloadF = open(payloadFile, "w").write(
                         subprodup.check_output(
@@ -159,7 +159,7 @@ def showInput():
                     print(payloadList)
             else:
                 cprint(
-                    "The created and saved components have been deleted or move.. Re-creating Components.... please be patient",
+                    "The created and saved components have been deleted or moved.. Re-creating Components.... please be patient",
                     "red")
                 makeFolder()
                 if os.path.exists(payloadFile):
@@ -176,8 +176,9 @@ def showInput():
                         payloadList = open(payloadFile).read()
                         print(payloadList)
                 else:
-                    cprint("please wait.... creating some components please be patient this is only one time process",
-                           "red")
+                    cprint(
+                        "The created and saved components have been deleted or moved.. Re-creating Components.... please be patient",
+                        "red")
                     payloadF = open(payloadFile, "w").write(
                         subprodup.check_output(
                             f"{pathData}&&cd/&&cd metasploit-framework/bin && msfvenom --list payloads",
