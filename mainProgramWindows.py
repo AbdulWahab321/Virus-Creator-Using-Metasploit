@@ -17,10 +17,10 @@ colorama.init()
 
 VirusCreatorFolder = "c:/Program Files/Virus-Creator-Py/"
 componentsFolder = "c:/Program Files/Virus-Creator-Py/components/"
-payloadFile = "c:/Program Files/Virus-Creator-Py/components/payloads.vcdf"
-formatFile = "c:/Program Files/Virus-Creator-Py/components/formats.vcdf"
-pathDataFile = "c:/Program Files/Virus-Creator-Py/components/pathData.vcdf"
-licenseFile = "c:/Program Files/Virus-Creator-Py/components/license.vcdf"
+payloadFile = "c:/Program Files/Virus-Creator-Py/components/PYLDH56.vcdf"
+formatFile = "c:/Program Files/Virus-Creator-Py/components/FTS5273.vcdf"
+pathDataFile = "c:/Program Files/Virus-Creator-Py/components/PDA53HD.vcdf"
+licenseFile = "c:/Program Files/Virus-Creator-Py/components/LC2F34FG.vcdf"
 
 licenseData = ""
 
@@ -102,7 +102,9 @@ else:
         else:
             payloadList = open(payloadFile).read()
     else:
-        cprint("please wait.... creating some components please be patient this is only one time process", "red")
+        cprint(
+            "The created and saved components have been deleted or move.. Re-creating Components.... please be patient",
+            "red")
         payloadF = open(payloadFile, "w").write(
             subprodup.check_output(f"{pathData}&&cd/&&cd metasploit-framework/bin && msfvenom --list payloads",
                                    shell=True).decode("utf-8"))
@@ -111,7 +113,7 @@ else:
     if os.path.exists(formatFile):
         formatList = open(formatFile).read()
         if formatList == "" or formatList == " ":
-            cprint("components have been modified fixing.....please wait")
+            cprint("components have been modified fixing them.....please wait")
             f = open(formatFile, "w").write(
                 subprodup.check_output(f"{pathData}&&cd/&&cd metasploit-framework/bin && msfvenom --list formats",
                                        shell=True).decode("utf-8"))
@@ -146,8 +148,9 @@ def showInput():
                         payloadList = open(payloadFile).read()
                         print(payloadList)
                 else:
-                    cprint("please wait.... creating some components please be patient this is only one time process",
-                           "red")
+                    cprint(
+                        "The created and saved components have been deleted or move.. Re-creating Components.... please be patient",
+                        "red")
                     payloadF = open(payloadFile, "w").write(
                         subprodup.check_output(
                             f"{pathData}&&cd/&&cd metasploit-framework/bin && msfvenom --list payloads",
@@ -162,7 +165,7 @@ def showInput():
                 if os.path.exists(payloadFile):
                     payloadList = open(payloadFile).read()
                     if payloadList == "" or payloadList == " ":
-                        cprint("components have been modified fixing.....please wait", "red")
+                        cprint("components have been modified fixing them.....please wait", "red")
                         p = open(payloadFile, "w").write(
                             subprodup.check_output(
                                 f"{pathData}&&cd/&&cd metasploit-framework/bin && msfvenom --list payloads",
