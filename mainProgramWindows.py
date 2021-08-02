@@ -259,7 +259,8 @@ def showInput():
           enter-ps1    to enter ps1 (powershell) command line where you can type ps1 commands  
           remove-virus-creator   deletes files created by virus creator
           clear-data    deletes all data files        
-          lsp           list all payloads
+          lsp           list all available payloads
+          lsf           list all available formats
           show-ip       shows your ip-address
           help          shows this message
     
