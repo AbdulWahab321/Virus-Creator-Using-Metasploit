@@ -477,7 +477,7 @@ def installMetasploit():
 
 
 def ps1():
-    cprint("Type 'exit-bash' command to exit", "green", None, attrs=["bold"])
+    cprint("Type 'exit-ps1' command to exit", "green", None, attrs=["bold"])
     ps = input(">> ")
     if ps != "exit-ps1":
         subprocess.run(["powershell", "-Command", ps])
