@@ -188,6 +188,10 @@ def showInput():
 
         elif platformPayload == "swd":
             print("Your current working directory is: " + os.getcwd())
+        elif platformPayload == "exit-vc":
+            cprint("Bye see you again......Have a nice day")
+            cprint("Exiting program.......","green")
+            sys.exit(0)
         elif platformPayload == "show-ip":
             cprint(f"Your current ip address is: '{socket.gethostbyname(socket.gethostname())}'")
         elif platformPayload == "enter-cmd":
@@ -261,6 +265,7 @@ def showInput():
             cprint("""
           enter-cmd    to enter cmd command line where you can type cmd commands 
           swd          shows you the current working directory
+          exit-vc      to exit virus-creator app (this program)
           enter-ps1    to enter ps1 (powershell) command line where you can type ps1 commands  
           remove-virus-creator   deletes files created by virus creator
           clear-data    deletes all data files        
